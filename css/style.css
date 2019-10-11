@@ -1,0 +1,22 @@
+.collection {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto auto;
+}
+
+.title a {
+    font-size: 36px;
+  display: block;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: Avenir, sans-serif;
+  display: block;
+  margin: 15em auto auto;
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@material/image-list": "^3.1.0",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}

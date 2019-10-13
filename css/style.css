@@ -6,17 +6,38 @@
 }
 
 .title a {
-    font-size: 36px;
-  display: block;
-  margin-top: 10px;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 body {
-  font-family: Avenir, sans-serif;
-  display: block;
-  margin: 15em auto auto;
+    font-family: Avenir, sans-serif;
+}
+
+.link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+
+.link a {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+img {
+    width: 32px;
+    height: 32px;
+}
+
+.collection {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

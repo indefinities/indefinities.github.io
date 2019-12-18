@@ -41,7 +41,8 @@
 <!-- ABOUT -->
 
 <div class="page">
-    <h1 class="uk-heading-line uk-text-center"><span>About Me</span></h1>
+    <h1 class="uk-heading-line uk-text-center" uk-parallax="opacity: 0,1; y: 50,0; viewport: false">
+        <span>About Me</span></h1>
     <div id="about" class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
          style="width: 100vh; height: 50vh;" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
@@ -51,7 +52,7 @@
             <div class="uk-card-body">
                 <h3 class="uk-card-title">Nat Hsu</h3>
                 <p>A current student at Northeastern University studying Computer Science and Design. Growing up, I've
-                    always had a passion for illustration. Although, now I wish to pursue a degree working on front-end
+                    always had a passion for illustration. Now I wish to pursue a degree working on front-end
                     web development and UI/UX (user interface and user experience design).</p>
             </div>
         </div>
@@ -60,7 +61,7 @@
 
 <!-- WORKS -->
 
-<h1 class="uk-heading-line uk-text-center"><span>Works</span></h1>
+<h1 class="uk-heading-line uk-text-center" uk-parallax="opacity: 0,1; y: 50,0; viewport: false"><span>Works</span></h1>
 
 <div id="works" uk-filter="target: .js-filter">
     <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
@@ -165,7 +166,8 @@
 
     <div class="page">
 
-        <h1 class="uk-heading-line uk-text-center"><span>Projects</span></h1>
+        <h1 class="uk-heading-line uk-text-center" uk-parallax="opacity: 0,1; y: 50,0; viewport: false">
+            <span>Projects</span></h1>
 
         <div id="projects" class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1"
              uk-slider="center: true">
@@ -205,15 +207,27 @@
     <!-- CASE STUDIES -->
 
     <div class="page">
-        <h1 class="uk-heading-line uk-text-center"><span>Case Studies</span></h1>
+        <h1 class="uk-heading-line uk-text-center" uk-parallax="opacity: 0,1; y: 50,0; viewport: false"><span>Case Studies</span>
+        </h1>
         <!--insert card format here and link to separate page?-->
     </div>
 
     <!-- CONTACT -->
-
     <div class="page">
-
-
+        <h1 class="uk-heading-line uk-text-center" uk-parallax="opacity: 0,1; y: 50,0; viewport: false"><span>Contact & Links</span>
+        </h1>
+        <div class="uk-child-width-1-2@s" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                    <span uk-icon="icon: github; ratio: 2"></span>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                    <span uk-icon="icon: instagram; ratio: 2"></span>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

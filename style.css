@@ -14,8 +14,14 @@ nav {
     margin-top: 10vh;
 }
 
-#home, #about, #projects {
+#home, #about-grid, #projects {
     margin: auto;
+}
+
+#down-arrow {
+    vertical-align: bottom;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 span {

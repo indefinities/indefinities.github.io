@@ -14,7 +14,7 @@ nav {
     margin-top: 10vh;
 }
 
-#home, #about-grid, #projects, #case-studies {
+#home, #about-grid, #projects, #case-studies, #contacts {
     margin: auto;
 }
 
@@ -39,4 +39,23 @@ span {
 
 .uk-logo {
     font-family: Avenir, sans-serif !important;
+}
+
+.icon {
+    width: 4vw;
+    height: auto;
+}
+
+#contacts a {
+    color: black;
+}
+
+#contacts span {
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+}
+
+.link {
+    justify-self: start;
+    text-align: center;
 }

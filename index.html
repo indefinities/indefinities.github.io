@@ -11,105 +11,196 @@
     <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
     <script src="node_modules/uikit/dist/js/uikit-icons.min.js"></script>
   </head>
+  <style>
+    .page {
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+  </style>
   <body>
     <a
       href="#offcanvas-slide"
       class="uk-margin-top uk-margin-left uk-animation-slide-top-medium"
       uk-icon="icon: menu; ratio: 3"
-      uk-toggle
+      uk-toggle="target: #offcanvas-overlay"
     ></a>
 
-    <div id="home" class="uk-animation-slide-top-medium">
-      <h1 class="uk-heading-large uk-text-center">
-        indefinities
-      </h1>
-      <div class="uk-alert-danger uk-width-2-3 uk-align-center" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <p class="uk-text-lead uk-text-center">A Northeastern Student</p>
+    <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <p>hello</p>
       </div>
-      <div class="uk-alert-warning uk-width-2-3 uk-align-center" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <p class="uk-text-lead uk-text-center">An Illustrator</p>
-      </div>
-      <div class="uk-alert-primary uk-width-2-3 uk-align-center" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <p class="uk-text-lead uk-text-center">A UX Developer</p>
+    </div>
+
+    <div class="page ">
+      <div id="home" class="uk-animation-slide-top-medium">
+        <h1
+          class="uk-heading-large uk-text-center uk-margin-large-top uk-margin-large-bottom"
+        >
+          indefinities <span uk-icon="icon: warning; ratio: 3"></span>
+        </h1>
+        <div class="uk-alert-danger uk-width-2-3 uk-align-center" uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          <p class="uk-text-lead uk-text-center">
+            A Northeastern Student <span uk-icon="users"></span>
+          </p>
+        </div>
+        <div class="uk-alert-warning uk-width-2-3 uk-align-center" uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          <p class="uk-text-lead uk-text-center">
+            An Illustrator <span uk-icon="pencil"></span>
+          </p>
+        </div>
+        <div class="uk-alert-primary uk-width-2-3 uk-align-center" uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          <p class="uk-text-lead uk-text-center">
+            A UX Developer <span uk-icon="bolt"></span>
+          </p>
+        </div>
       </div>
     </div>
 
     <hr />
 
-    <div
-      id="about"
-      class="uk-card uk-card-default uk-card-body uk-width-2-3 uk-align-center"
-    >
-      <article class="uk-comment">
-        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-          <div class="uk-width-auto">
-            <img
-              class="uk-comment-avatar"
-              src="images/Profile Picture.jpg"
-              width="100"
-              height="100"
-              alt=""
-            />
+    <div class="page">
+      <div
+        id="about"
+        class="uk-card uk-card-default uk-card-body uk-width-2-3 uk-align-center uk-animation-slide-top-medium"
+      >
+        <article class="uk-comment">
+          <header
+            class="uk-comment-header uk-grid-medium uk-flex-middle"
+            uk-grid
+          >
+            <div class="uk-width-auto">
+              <img
+                class="uk-comment-avatar"
+                src="assets/images/Profile Picture.jpg"
+                width="100"
+                height="100"
+                alt=""
+              />
+            </div>
+            <div class="uk-width-expand">
+              <h2>Natalie Hsu</h2>
+              <ul
+                class="uk-comment-meta uk-subnav-divider uk-margin-remove-top uk-iconnav"
+              >
+                <li>
+                  <a
+                    href="mailto:natalie.d.hsu@gmail.com"
+                    uk-icon="icon: google"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/indefinities"
+                    uk-icon="icon: instagram"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/indefinities"
+                    uk-icon="icon: github-alt"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://gitlab.com/indefinities" target="_blank">
+                    <img src="assets/icons/gitlab.svg" width="30" height="30" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/natalie-hsu-aa5b68186/"
+                    uk-icon="icon: linkedin"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/indefinities"
+                    uk-icon="icon: twitter"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UC28uaNlTX1h8fwEd-L3tfPA"
+                    uk-icon="icon: youtube"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/indefinities" target="_blank">
+                    <img src="assets/icons/twitch.svg" width="20" height="20" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </header>
+          <div class="uk-comment-body">
+            <p class="uk-text-large">
+              Currently studying Computer Science and Design, BS at Northeastern
+              University. I have had a strong passion for illustration ever
+              since I was young, I draw anytime I have the free time to do so.
+              Otherwise, I am brushing up my skills as a front-end web developer
+              and UI/ UX designer to adapt to the fast-growing pace of new
+              technologies.
+            </p>
           </div>
-          <div class="uk-width-expand">
-            <h2>Natalie Hsu</h2>
-            <ul
-              class="uk-comment-meta uk-subnav-divider uk-margin-remove-top uk-iconnav"
-            >
-              <li>
-                <a
-                  href="mailto:indefinities@gmail.com"
-                  uk-icon="icon: google"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/indefinities"
-                  uk-icon="icon: instagram"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/indefinities"
-                  uk-icon="icon: github-alt"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/natalie-hsu-aa5b68186/"
-                  uk-icon="icon: linkedin"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/indefinities"
-                  uk-icon="icon: twitter"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UC28uaNlTX1h8fwEd-L3tfPA"
-                  uk-icon="icon: youtube"
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </header>
-        <div class="uk-comment-body">
-          <p class="uk-text-large">
-            Currently studying Computer Science and Design, BS at Northeastern
-            University. I have had a strong passion for illustration ever since
-            I was young, I draw anytime I have the free time to do so.
-            Otherwise, I am brushing up my skills as a UX Developer and adapting
-            to the fast-growing pace of new technologies.
-          </p>
-        </div>
-      </article>
+        </article>
+      </div>
+      <a
+        class="uk-button uk-button-primary uk-width-1-3 uk-align-center"
+        href="assets/docs/Resume.pdf"
+        target="_blank"
+        ><p class="uk-text-large uk-margin-top">View Resume!</p></a
+      >
     </div>
 
-    <div id="works" class="uk-grid-small"></div>
+    <hr />
+
+    <div class="page">
+      <div
+        id="works"
+        class="uk-width-2-3 uk-align-center"
+        uk-filter="target: .js-filter"
+      >
+        <ul class="uk-subnav uk-subnav-pill">
+          <li uk-filter-control=".tag-white">
+            <div
+              class="uk-card uk-card-default uk-card-body uk-button uk-button-default"
+            >
+              <h3 class="uk-card-title">white</h3>
+            </div>
+          </li>
+          <li uk-filter-control=".tag-blue">
+            <div
+              class="uk-card uk-card-default uk-card-body uk-button uk-button-default"
+            >
+              <h3 class="uk-card-title">white</h3>
+            </div>
+          </li>
+          <li uk-filter-control=".tag-black">
+            <div
+              class="uk-card uk-card-default uk-card-body uk-button uk-button-default"
+            >
+              <h3 class="uk-card-title">white</h3>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="uk-thumbnav" uk-margin>
+          <li uk-lightbox>
+            <a href="images/stickers/fat cat.png"
+              ><img src="assets/images/stickers/fat cat.png" width="200"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

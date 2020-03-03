@@ -111,7 +111,7 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-uikit@^3.2.6:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.3.1.tgz#342987c1d5072a04f63630429310e79cd74d7b8a"
-  integrity sha512-ddE01TPVP2rA8A/a9wkaixkhympjIOfpL//Gp0lHrjTNskBZYIazmBjW9OifJNrvp5di/1kbWVBl8fWKswAQnQ==
+uikit@^3.3.3:
+  version "3.3.3"
+  resolved "https://chewyinc.jfrog.io/chewyinc/api/npm/npm/uikit/-/uikit-3.3.3.tgz#756f6dae476657a72155515d74099a3f30db8818"
+  integrity sha1-dW9trkdmV6chVVFddAmaPzDbiBg=

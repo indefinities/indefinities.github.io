@@ -6,7 +6,6 @@
   "author": "Natalie Hsu",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.26.2",
     "uikit": "^3.3.3"
   }
 }

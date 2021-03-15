@@ -1,8 +1,24 @@
-# Nat Hsu's Portfolio Website
+# indefinities.github.io
 
-### indefinities.github.io
+## Project setup
+```
+yarn install
+```
 
-Welcome to the repository for my personal website! For this website, I used `yarn` as a package manager and (https://getuikit.com/ "UIKit") for components and layout. It's a pretty simple website simply to show employers, friends, and family the work I have been doing. Also please don't steal the images in this repository -- I worked hard on those art pieces :~).
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
+### Compiles and minifies for production
+```
+yarn build
+```
 
-Vue JS Implementation
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

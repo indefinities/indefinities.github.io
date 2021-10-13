@@ -1,0 +1,18 @@
+@import './variables';
+
+body {
+    font-family: Avenir, sans-serif;
+}
+
+h1 {
+    font-size: $indefinities-h1;
+}
+
+h2 {
+    font-size: $indefinities-h2;
+    font-weight: normal;
+}
+
+p {
+    font-size: $indefinities-p;
+}

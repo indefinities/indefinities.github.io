@@ -1,24 +1,5 @@
-# indefinities.github.io
+# indefinite, infinities
 
-## Project setup
-```
-yarn install
-```
+https://indefinities.github.io
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The personal website of Nat Hsu written using Vite + Vue3.

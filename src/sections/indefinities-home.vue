@@ -35,7 +35,7 @@ import indefinitiesButton from "../components/indefinities-button.vue";
 .indefinities-home {
 
   &__content {
-    padding-top: 20vh;
+    padding-top: 25%;
   }
 
   &__arrow {
@@ -46,7 +46,7 @@ import indefinitiesButton from "../components/indefinities-button.vue";
 
     &:after {
       position: absolute;
-      top: 12px;
+      top: 10px;
       left: -10px;
       transform: rotateZ(45deg);
     }

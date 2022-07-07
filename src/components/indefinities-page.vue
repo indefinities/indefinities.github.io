@@ -12,6 +12,6 @@
 .indefinities-page {
     margin-left: 10px;
     margin-right: 10px;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 </style>

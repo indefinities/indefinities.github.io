@@ -3,7 +3,10 @@
 </script>
 
 <template>
-    <section class="indefinities-page">
+    <section 
+    class="indefinities-page" 
+    data-aos="fade-up" 
+    data-aos-duration="2000">
         <slot />
     </section>
 </template>

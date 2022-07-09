@@ -1,5 +1,4 @@
 <script setup>
-import indefinitiesNavigation from "../components/indefinities-navigation.vue";
 import indefinitiesPage from "../components/indefinities-page.vue";
 import indefinitiesButton from "../components/indefinities-button.vue";
 
@@ -9,9 +8,6 @@ import indefinitiesButton from "../components/indefinities-button.vue";
 
   <section class="indefinities-home">
     <indefinities-page>
-
-      <indefinities-navigation />
-
       <div class="indefinities-home__content">
         <h1><em>indefinite, indefinities</em></h1>
 
@@ -33,7 +29,7 @@ import indefinitiesButton from "../components/indefinities-button.vue";
 
 <style lang="scss" scoped>
 .indefinities-home {
-
+  margin: 0 5%;
   &__content {
     padding-top: 25%;
   }
@@ -51,7 +47,6 @@ import indefinitiesButton from "../components/indefinities-button.vue";
       transform: rotateZ(45deg);
     }
   }
-
 
   @keyframes jump-infinite {
   0% {

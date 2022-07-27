@@ -30,13 +30,14 @@ import indefinitiesButton from "../components/indefinities-button.vue";
 <style lang="scss" scoped>
 .indefinities-home {
   margin: 0 5%;
+
   &__content {
-    padding-top: 25%;
+    padding-top: 35%;
   }
 
   &__arrow {
     position: absolute;
-    top: calc(100vh - 80px);
+    top: calc(80vh);
     left: calc(50% - 14px);
     animation: jump-infinite 1.5s infinite;
 
@@ -48,19 +49,19 @@ import indefinitiesButton from "../components/indefinities-button.vue";
     }
   }
 
-  @keyframes jump-infinite {
-  0% {
-    margin-top: 0;
-    opacity: 25%;
+    @keyframes jump-infinite {
+    0% {
+      margin-top: 0;
+      opacity: 25%;
+    }
+    50% {
+      margin-top: 20px;
+      opacity: 100%;
+    }
+    100% {
+      margin-top: 0;
+      opacity: 25%;
+    }
   }
-  50% {
-    margin-top: 20px;
-    opacity: 100%;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 25%;
-  }
-}
 }
 </style>

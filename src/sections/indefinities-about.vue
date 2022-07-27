@@ -29,11 +29,15 @@ import indefinitiesPage from "../components/indefinities-page.vue";
 
 <style lang="scss" scoped>
 .indefinities-about {
+
     &__picture {
         width: 100%;
 
         @media only screen and (min-width: 600px) {
             width: 500px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 }

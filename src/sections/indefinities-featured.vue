@@ -46,7 +46,7 @@ import indefinitiesPage from '../components/indefinities-page.vue';
             </div>
 
             <div class="indefinities-featured__project">
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="400" height="900" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FduYaruNdbrIuOgsSV4pSNA%2FNatalie_Hsu%3Fnode-id%3D209%253A346%26scaling%3Dmin-zoom%26page-id%3D209%253A9" allowfullscreen></iframe>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="300" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FduYaruNdbrIuOgsSV4pSNA%2FNatalie_Hsu%3Fnode-id%3D209%253A346%26scaling%3Dmin-zoom%26page-id%3D209%253A9" allowfullscreen></iframe>
                 <a href="https://www.figma.com/proto/duYaruNdbrIuOgsSV4pSNA/Natalie_Hsu?node-id=209%3A346&scaling=min-zoom&page-id=209%3A9">
                     <h2>Kung Fu Tea (Redesign)</h2>
                 </a>

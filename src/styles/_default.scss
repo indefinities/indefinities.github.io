@@ -1,24 +1,38 @@
 @import './_variables';
 
+:root {
+    font-family: Avenir, sans-serif;
+    background-color: $indefinities-dark-blue;
+    color: $indefinities-light-blue;
+}
+
 body {
-    font-family: $indefinities-font-family;
     margin: 0;
     padding: 0;
 }
 
 a {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
+    color: white;
     font-size: $indefinities-text;
 }
 
 h1 {
+    margin: 0;
+    padding: 0;
     font-size: $indefinities-h1;
 }
 
 h2 {
+    margin: 0;
+    padding: 0;
     font-size: $indefinities-h2;
 }
 
 p {
+    margin: 0;
+    padding: 0;
     font-size: $indefinities-text;
 }

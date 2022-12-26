@@ -1,67 +1,165 @@
-<script setup>
-import indefinitiesPage from "../components/indefinities-page.vue";
-import indefinitiesButton from "../components/indefinities-button.vue";
-
-</script>
-
 <template>
-
   <section class="indefinities-home">
-    <indefinities-page>
-      <div class="indefinities-home__content">
-        <h1><em>indefinite, indefinities</em></h1>
+      <div
+          class="indefinities-home__landing"
+          data-aos="fade-up"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out">
 
-        <p>
-          Boston-based UX developer and illustrator who enjoys trying innovative beverage places.
-        </p>
+          <div class="indefinities-home__cover">
+          </div>
 
-        <indefinities-button>
-          view resume
-        </indefinities-button>
+        <div class="indefinities-home__landing__content">
+          <h1>indefinite, indefinities ✨</h1>
+
+          <p>
+            ☀️ daytime UX developer, <br>
+            🌙 nighttime digital illustrator, <br>
+            😎 full-time café hopper <br>
+          </p>
+
+          <indefinities-button
+              v-for="(option, index) in options"
+              :key="index"
+              :route="option.path">
+            {{ option.name }}
+          </indefinities-button>
+
+          <indefinities-button url="src/assets/Hsu_Natalie_Resume.pdf">
+            VIEW RESUME
+          </indefinities-button>
+        </div>
+          <indefinities-down-arrow />
       </div>
-    
-      <img 
-      class="indefinities-home__arrow"
-      src="../assets/arrow_drop_down.svg" />
-    </indefinities-page>
+
+
+      <div class="indefinities-home__section"
+           data-aos="fade-up"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out" >
+
+        <div class="indefinities-home__inner-content">
+          <h1>
+            Nat Hsu is...
+          </h1>
+          <p>... currently wandering the city of <strong>Boston, Massachusetts</strong></p>
+
+          <img class="indefinities-home__image" src="../assets/nat-hawaii.jpg" />
+
+          <p>
+            I’m a part-time graduate student in the
+            <a href="https://camd.northeastern.edu/program/information-design-and-data-visualization-ms/" target="_blank">
+              Information Design and Data Visualization, MS</a> program at <a href="https://northeastern.edu">Northeastern University</a>.
+          </p>
+
+          <p>
+            Currently seeking full-time opportunities designing and developing intuitive, responsive, and accessible user
+            experiences for mobile and desktop web applications.
+          </p>
+        </div>
+
+          <indefinities-down-arrow />
+      </div>
+
+
+    <div class="indefinities-home__section"
+         data-aos="fade-up"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out" >
+      <h1>
+        PROJECT <br>
+        SPOTLIGHT
+      </h1>
+
+      <indefinities-card
+          v-for="(item, index) in spotlight"
+          :key="index"
+          :image="`src/assets/projects/${item.file}`"
+          :skill-stack="item.skillStack"
+      >
+        <template #title>
+          {{ item.title }}
+        </template>
+        <template #desc>
+          {{ item.desc }}
+        </template>
+      </indefinities-card>
+
+    </div>
+
   </section>
 </template>
 
-<style lang="scss" scoped>
+<script lang="js">
+import indefinitiesButton from "../components/indefinities-button.vue";
+import IndefinitiesDownArrow from "../components/indefinities-down-arrow.vue";
+import IndefinitiesCard from "../components/indefinities-card.vue";
+
+import spotlight from "../data/spotlight.js";
+
+export default {
+  name: 'indefinities-home',
+  components: {
+    IndefinitiesCard,
+    IndefinitiesDownArrow,
+    indefinitiesButton,
+  },
+  data() {
+    return {
+      spotlight,
+      options: [
+        {
+          path: '/about/',
+          name: 'ABOUT ME',
+        },
+        {
+          path: '/works/',
+          name: 'WORKS',
+        },
+      ],
+    }
+  },
+}
+</script>
+
+<style lang="scss">
+@import "../styles/_base.scss";
+
 .indefinities-home {
-  margin: 0 5%;
+  min-width: 100%;
 
-  &__content {
-    padding-top: 35%;
-  }
+  &__landing {
+    min-height: fit-content;
 
-  &__arrow {
-    position: absolute;
-    top: calc(80vh);
-    left: calc(50% - 14px);
-    animation: jump-infinite 1.5s infinite;
+    &__content {
+      margin: 5vh 15vw;
 
-    &:after {
-      position: absolute;
-      top: 10px;
-      left: -10px;
-      transform: rotateZ(45deg);
+      .indefinities-button {
+        margin-top: 2%;
+      }
     }
   }
 
-    @keyframes jump-infinite {
-    0% {
-      margin-top: 0;
-      opacity: 25%;
+  &__cover {
+    height: 45vh;
+    min-width: 100%;
+    background-color: black;
+  }
+
+  &__section {
+    min-height: $indefiities-page-height;
+    display: block;
+    margin: 30vh 15vw;
+  }
+
+  &__inner-content {
+    p {
+      padding: 20px 0;
     }
-    50% {
-      margin-top: 20px;
-      opacity: 100%;
-    }
-    100% {
-      margin-top: 0;
-      opacity: 25%;
-    }
+  }
+
+  &__image {
+    width: 375px;
   }
 }
 </style>

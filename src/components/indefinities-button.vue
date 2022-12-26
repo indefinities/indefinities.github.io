@@ -1,47 +1,88 @@
-<script setup>
-// variables
-
-defineProps({
-    url: {
-        type: String,
-        required: false,
-    }
-})
-
-</script>
-
 <template>
     <div class="indefinities-button">
-        <button @click="this.$emit('click')">
+      <div v-if="route">
+        <router-link :to="route" tag="button">
+          <span>
             <slot />
-        </button>
+          </span>
+        </router-link>
+      </div>
 
-    <!-- if there's a link included on the button -->
-        <a v-if="url" :href="url">
+      <div v-if="url">
+        <button @click="toLink" formtarget="_blank" >
+          <span>
             <slot />
-        </a>
+          </span>
+        </button>
+      </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.indefinities-button {
+<script lang="js">
+export default {
+  name: 'indefinities-button',
+  props: {
+    /**
+     * The route which the button should direct to
+     */
+    route: {
+      type: String,
+      default: '',
+      required: false,
+    },
 
-    button {
-        display: inline-block;
-        border-radius: 10px;
-        border: 0;
-        padding: 1rem 2rem;
-        margin: 0;
-        background: lightblue;
-        color: black;
-        font-family: sans-serif;
-        font-size: 1rem;
-        line-height: 1;
-        cursor: pointer;
-        text-align: center;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+    /**
+     * The URL of the page which the button should direct to
+     */
+    url: {
+      type: String,
+      default: '',
+      required: false,
+    }
+  },
+  computed: {
+    /**
+     * The action the button should take to go to the link
+     * @returns {string}
+     */
+    toLink() {
+      return window.location.href = this.url;
+    },
+  },
+}
+</script>
+
+<style lang="scss">
+@import "../styles/_base.scss";
+
+.indefinities-button {
+    width: 30%;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background-color: $indefinities-light-blue;
+    cursor: pointer;
+    text-align: center;
+
+    @media only screen and (max-width: 375px) {
+      width: 100%;
     }
 
+    span {
+      color: $indefinities-dark-blue;
+      font-weight: 500;
+    }
+
+    button {
+        background: $indefinities-light-blue;
+        border-radius: 10px;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: $indefinities-text;
+        line-height: 1;
+
+    }
 }
 </style>

@@ -1,11 +1,5 @@
-<script setup>
-import indefinitiesPage from "../components/indefinities-page.vue";
-
-</script>
-
 <template>
     <section class="indefinities-about">
-        <indefinities-page>
             <img
             class="indefinities-about__picture"
             src="../assets/nat-hsu.jpeg" />
@@ -23,22 +17,19 @@ import indefinitiesPage from "../components/indefinities-page.vue";
                 <p><strong>Interests</strong></p>
                 <p>illustration, travel, music, anime + manga, cosplay, Genshin Impact</p>
             </span>
-        </indefinities-page>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .indefinities-about {
-
-    &__picture {
-        width: 100%;
-
-        @media only screen and (min-width: 600px) {
-            width: 500px;
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
-        }
+  &__picture {
+    width: 100%;
+    @media only screen and (min-width: 600px) {
+        width: 500px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
+  }
 }
 </style>

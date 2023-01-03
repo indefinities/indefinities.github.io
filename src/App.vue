@@ -12,8 +12,6 @@ import IndefinitiesNav from "./components/indefinities-nav.vue";
 
 <style lang="scss">
 @import "styles/_base.scss";
-
 #app {
-
 }
 </style>

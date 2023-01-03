@@ -27,7 +27,7 @@ export default {
     outlined: {
       type: Boolean,
       default: false,
-      required: true,
+      required: false,
     },
 
     /**

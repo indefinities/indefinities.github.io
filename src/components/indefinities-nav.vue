@@ -1,7 +1,9 @@
 <template>
     <div class="indefinities-nav">
-      <div class="indefinities-nav__banner">
-        <div class="indefinities-nav__icon" @click="navActions()">
+      <div class="indefinities-nav__banner"
+           v-if="!openMenu">
+        <div class="indefinities-nav__icon"
+             @click="navActions()">
           <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 36h36v-4H6v4Zm0-10h36v-4H6v4Zm0-14v4h36v-4H6Z" fill="#9DC0D9"/>
           </svg>
@@ -11,11 +13,26 @@
         <div class="indefinities-nav__menu"
              data-aos="fade-right"
              v-if="openMenu">
-          <ul>
-            <li>
+          <div class="indefinities-nav__close">
+            <button
+                @click="this.openMenu = !this.openMenu"
+                aria-label="Close Menu"
+                type="button"
+                data-close>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-            </li>
-          </ul>
+          <div class="indefinities-nav__menu__content">
+            <ul>
+              <li v-for="(r, index) in routes"
+                  :key="index">
+                <router-link :to="r.path">
+                  {{ r.name }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
         </div>
     </div>
 </template>
@@ -51,8 +68,6 @@ export default {
 
 <style lang="scss" scoped>
 .indefinities-nav {
-  height: fit-content;
-
   &__banner {
     z-index: 1;
     min-width: 100%;
@@ -67,12 +82,45 @@ export default {
     cursor: pointer;
   }
 
+  &__close {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 20px;
+
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+  }
+
   &__menu {
-    display: inline-block;
-    width: 50vw;
+    z-index: 1;
+    margin-right: 0;
+    width: 100%;
     height: 100vh;
     background-color: black;
-    background-blend-mode: multiply;
+    font-size: 48px;
+
+    ul {
+      list-style-type: none;
+      width: fit-content;
+      margin: 20vh auto 0;
+
+      li {
+        width: fit-content;
+        margin-top: 5vh;
+        margin-right: 0;
+      }
+    }
+
+    a {
+      font-size: 64px;
+    }
   }
 }
 </style>

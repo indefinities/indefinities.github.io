@@ -53,7 +53,7 @@ export default {
 @import "../styles/_base.scss";
 
 .indefinities-card {
-  margin: 1% 0;
+  margin: 5vh 0;
   border-radius: 10px;
   background-color: $indefinities-light-blue;
   color: $indefinities-dark-blue;

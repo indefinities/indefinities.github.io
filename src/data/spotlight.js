@@ -40,7 +40,7 @@ const spotlight = [
         ],
         url: '',
         repo: '',
-        desc: ''
+        desc: 'In Fall 2022, I took ARTG 5710: Design for Dignity. During the course, I worked with other Experience Design students to create an experience which aligns with users dignity.'
     },
     {
         title: 'Kung Fu Tea',
@@ -59,7 +59,7 @@ const spotlight = [
         ],
         url: '',
         repo: '',
-        desc: ''
+        desc: 'In Fall 2021, I took ARTG 3700: Interaction Design II as a required course. I had the opportunity to redesign a mobile application I use frequently.'
     },
 ]
 

@@ -17,6 +17,12 @@ a {
     text-decoration: none;
     color: white;
     font-size: $indefinities-text;
+    transition: color 1s;
+
+    &:hover,
+    &:focus {
+        color: lightpink;
+    }
 }
 
 h1 {

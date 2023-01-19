@@ -1,7 +1,10 @@
 <template>
   <div class="indefinities-card">
-    <img :src="image"
-         class="indefinities-card__image"/>
+    <a :href="link" target="_blank">
+      <img :src="image"
+           class="indefinities-card__image"/>
+    </a>
+
 
     <div class="indefinities-card__content">
       <h2>
@@ -35,11 +38,25 @@ export default {
     indefinitiesPill
   },
   props: {
+    /**
+     * the link to the project displayed on the card
+     */
+    link: {
+      type: String,
+      default: '',
+      required: false,
+    },
+    /**
+     * the path of the splash image for the project
+     */
     image: {
       type: String,
       default: '',
       required: false,
     },
+    /**
+     * the list of skills for the project.
+     */
     skillStack: {
       type: Array,
       default: [],

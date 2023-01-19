@@ -1,5 +1,29 @@
 const spotlight = [
     {
+        title: 'Mister Monut',
+        file: 'monut.png',
+        skillStack: [
+            {
+                icon: 'vue',
+                label: 'Vue',
+                url: 'https://vuejs.org/'
+            },
+            {
+                icon: 'javascript',
+                label: 'JavaScript',
+                url: 'https://www.javascript.com/'
+            },
+            {
+                icon: 'figma',
+                label: 'Figma',
+                url: ''
+            },
+        ],
+        url: 'https://mistermonut.com',
+        repo: 'https://github.com/indefinities/mister-monut',
+        desc: 'Mister Monut is a bakery opening up in Waltham, MA selling homemade mochi donuts and croffles.'
+    },
+    {
         title: 'PerZeption',
         file: 'perzeption.png',
         skillStack: [
@@ -20,7 +44,7 @@ const spotlight = [
             },
         ],
         url: 'https://perzeption.github.io',
-        repo: '',
+        repo: 'https://github.com/PerZeption/perzeption.github.io',
         desc: 'PerZeption is a project I worked on with other design students while taking ARTG 4700: Interaction Design Capstone in collaboration with the Psychology Lab.'
     },
     {

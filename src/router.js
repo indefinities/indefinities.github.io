@@ -1,8 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import {
     indefinitiesHome,
-    indefinitiesAbout,
-    indefinitiesWorks,
 } from './sections/sections-export.js';
 
 const routes = [
@@ -10,16 +8,6 @@ const routes = [
         path: '/',
         name: 'Home',
         component: indefinitiesHome,
-    },
-    {
-        path: '/about/',
-        name: 'About Me',
-        component: indefinitiesAbout,
-    },
-    {
-        path: '/works/',
-        name: 'Works',
-        component: indefinitiesWorks,
     },
 ];
 

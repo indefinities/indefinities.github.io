@@ -25,7 +25,7 @@
             {{ option.name }}
           </indefinities-button>
 
-          <indefinities-button url="src/assets/Hsu_Natalie_Resume.pdf">
+          <indefinities-button url="/Hsu_Natalie_Resume.pdf">
             VIEW RESUME
           </indefinities-button>
         </div>
@@ -44,12 +44,12 @@
           </h1>
           <p>... currently wandering the city of <strong>Boston, Massachusetts</strong></p>
 
-          <img class="indefinities-home__image" src="../assets/nat-hawaii.jpg" />
+          <img class="indefinities-home__image" src="/nat-hawaii.jpg" />
 
           <p>
             I’m a part-time graduate student in the
             <a href="https://camd.northeastern.edu/program/information-design-and-data-visualization-ms/" target="_blank">
-              Information Design and Data Visualization, MS</a> program at <a href="https://northeastern.edu">Northeastern University</a>.
+              Information Design and Data Visualization, MS</a> program at <a href="https://northeastern.edu" target="_blank">Northeastern University</a>.
           </p>
 
           <p>
@@ -74,7 +74,8 @@
       <indefinities-card
           v-for="(item, index) in spotlight"
           :key="index"
-          :image="`src/assets/projects/${item.file}`"
+          :image="`/projects/${item.file}`"
+          :link="item.url"
           :skill-stack="item.skillStack"
       >
         <template #title>

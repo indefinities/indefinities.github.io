@@ -2,7 +2,7 @@
   <div class="indefinities-pill"
   :class="outlined ? 'indefinities-pill__outlined' : 'indefinities-pill__default'">
     <a :href="url">
-      <img :src="`src/assets/icons/${icon}.svg`" height="24"/>
+      <img :src="`icons/${icon}.svg`" height="24"/>
       <span><slot /></span>
     </a>
   </div>

@@ -68,11 +68,13 @@ export default {
 
 <style lang="scss" scoped>
 .indefinities-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
   &__banner {
-    z-index: 1;
-    min-width: 100%;
-    min-height: 5vh;
-    position: fixed;
     top: 0;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   }

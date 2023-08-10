@@ -6,7 +6,11 @@
     color: $indefinities-light-blue;
 }
 
-body {
+#app {
+    width: 100%;
+}
+
+html, body, section {
     margin: 0;
     padding: 0;
 }

@@ -4,7 +4,7 @@
         <div class="indefinities-footer__usernames indefinities-footer__section">
         <span>
           <img src="../assets/icons/contact/discord.svg" width="24" />
-          <p>indefinties#8888</p>
+          <p>ny.at</p>
         </span>
           <span>
           <img src="../assets/icons/contact/mail.svg" width="24" />

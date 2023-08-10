@@ -127,7 +127,7 @@ export default {
 @import "../styles/_base.scss";
 
 .indefinities-home {
-  min-width: 100%;
+  width: 100%;
 
   &__landing {
     min-height: fit-content;

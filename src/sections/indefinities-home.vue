@@ -1,13 +1,12 @@
 <template>
   <section class="indefinities-home">
+      <div class="indefinities-home__cover" />
+      
       <div
-          class="indefinities-home__landing"
+          class="indefinities-home__section"
           data-aos="fade-up"
-           data-aos-duration="1000"
-           data-aos-easing="ease-in-out">
-
-          <div class="indefinities-home__cover">
-          </div>
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
 
         <div class="indefinities-home__landing__content">
           <h1>indefinite, indefinities ✨</h1>
@@ -34,9 +33,9 @@
 
 
       <div class="indefinities-home__section"
-           data-aos="fade-up"
-           data-aos-duration="1000"
-           data-aos-easing="ease-in-out" >
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
 
         <div class="indefinities-home__inner-content">
           <h1>
@@ -127,18 +126,8 @@ export default {
 @import "../styles/_base.scss";
 
 .indefinities-home {
-  min-width: 100%;
-
-  &__landing {
-    min-height: fit-content;
-
-    &__content {
-      margin: 5vh 15vw;
-
-      .indefinities-button {
-        margin-top: 2%;
-      }
-    }
+  .indefinities-button {
+    margin-top: 2%;
   }
 
   &__cover {
@@ -150,7 +139,7 @@ export default {
   &__section {
     min-height: $indefiities-page-height;
     display: block;
-    margin: 30vh 15vw;
+    margin: 0 5%;
   }
 
   &__inner-content {
@@ -160,7 +149,7 @@ export default {
   }
 
   &__image {
-    width: 375px;
+    width: 100%;
   }
 }
 </style>

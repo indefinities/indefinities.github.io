@@ -1,15 +1,14 @@
 <template>
     <div class="indefinities-footer">
-      <div class="indefinities-footer__content">
-        <div class="indefinities-footer__usernames indefinities-footer__section">
-        <span>
-          <img src="../assets/icons/contact/discord.svg" width="24" />
-          <p>indefinties#8888</p>
-        </span>
-          <span>
-          <img src="../assets/icons/contact/mail.svg" width="24" />
-          <a href="mailto:natalie.d.hsu@gmail.com">natalie.d.hsu@gmail.com</a>
-        </span>
+        <div class="indefinities-footer__usernames">
+          <div class="indefinities-footer__socials">
+            <img src="../assets/icons/contact/discord.svg" width="24" />
+            <p>ny.at</p>
+          </div>
+          <div class="indefinities-footer__socials">
+            <img src="../assets/icons/contact/mail.svg" width="24" />
+            <a href="mailto:natalie.d.hsu@gmail.com">natalie.d.hsu@gmail.com</a>
+          </div>
         </div>
 
 <!--        Turn this row into only icons in mobile view-->
@@ -25,12 +24,8 @@
           </indefinities-pill>
         </div>
 
-        <span class="indefinities-footer__section">
         <p>indefinities ©️ {{ getCurrentYear }}</p>
-      </span>
-      </div>
-      </div>
-
+    </div>
 </template>
 
 <script lang="js">
@@ -63,13 +58,8 @@ export default {
 .indefinities-footer {
   width: 100%;
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
-
-  &__content {
-    width: fit-content;
-    display: block;
-    margin: auto;
-    text-align: center;
-  }
+  text-align: center;
+  padding-bottom: 5vh;
 
   &__section {
     padding: 5%;
@@ -80,20 +70,13 @@ export default {
   }
 
   &__usernames {
-    width: fit-content;
-    display: block;
-    margin: auto;
-
-    span {
-      display: flex;
-      flex-direction: row;
-    }
+    display: inline-flex;
+    flex-flow: column wrap;
   }
 
   &__socials {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    flex-flow: row wrap;
     align-items: center;
   }
 }

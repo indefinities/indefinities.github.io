@@ -1,20 +1,12 @@
 <template>
     <div class="indefinities-button">
-      <div v-if="route">
-        <router-link :to="route" tag="button">
-          <span>
+        <router-link v-if="route" :to="route">
             <slot />
-          </span>
         </router-link>
-      </div>
 
-      <div v-if="url">
-        <button @click="toLink" formtarget="_blank" >
-          <span>
+        <a v-if="url" :href="url" target="_blank" >
             <slot />
-          </span>
-        </button>
-      </div>
+        </a>
     </div>
 </template>
 
@@ -39,16 +31,7 @@ export default {
       default: '',
       required: false,
     }
-  },
-  computed: {
-    /**
-     * The action the button should take to go to the link
-     * @returns {string}
-     */
-    toLink() {
-      return window.location.href = this.url;
-    },
-  },
+  }
 }
 </script>
 
@@ -56,33 +39,18 @@ export default {
 @import "../styles/_base.scss";
 
 .indefinities-button {
-    width: 30%;
     border-radius: 10px;
     padding: 1rem 2rem;
     background-color: $indefinities-light-blue;
     cursor: pointer;
     text-align: center;
+    font-family: sans-serif;
+    font-size: $indefinities-text;
+    line-height: 1;
 
-    @media only screen and (max-width: 375px) {
-      width: 100%;
-    }
-
-    span {
+    a {
       color: $indefinities-dark-blue;
       font-weight: 500;
-    }
-
-    button {
-        background: $indefinities-light-blue;
-        border-radius: 10px;
-        display: inline-block;
-        border: 0;
-        padding: 0;
-        margin: 0;
-        font-family: sans-serif;
-        font-size: $indefinities-text;
-        line-height: 1;
-
     }
 }
 </style>

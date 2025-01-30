@@ -11,7 +11,7 @@
   ]
 </script>
 
-<footer class="w-full">
+<footer class="w-full px-24 py-16">
   <div>
     <h3>© indefinites 2025</h3>
   </div>

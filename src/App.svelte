@@ -4,15 +4,12 @@
   import type { ProjectImport } from "$lib/types.ts";
 
   import * as d3 from "d3";
-  import * as Card from "$lib/components/ui/card/index.ts";
-  import * as Carousel from "$lib/components/ui/carousel/index.ts";
 
   import Footer from "$lib/components/Footer.svelte";
   import Nav from "$lib/components/Nav.svelte";
-  import Autoplay from "embla-carousel-autoplay";
 
   import { ModeWatcher } from "mode-watcher";
-  import { Button } from "$lib/components/ui/button/index.ts";
+  import { Button, Pagination } from "bits-ui";
 
   let projectsPath: string = '/data/projects.tsv';
   let projects: [] = [];
@@ -27,7 +24,7 @@
           desc: d['Description'],
           url: d['URL'],
         };
-      }).then((data: []) => {
+      }).then((data: any) => {
         projects = data;
       });
     } catch (error) {
@@ -75,36 +72,31 @@
 
       <p>Within my current position,</p>
 
-      <Button class="my-5">👀 peek my resume</Button>
+      <Button.Root class="my-5">👀 peek my resume</Button.Root>
     </div>
 
     <div class="indefinities-home-section">
       <h2>Some of my work</h2>
       <!-- https://docs.google.com/spreadsheets/d/1s8DRDlWgLMvd4DbvoLtwvrqgdtc_dB0uyx8ZeQFMG3A/edit?gid=0#gid=0 -->
-    <Carousel.Root plugins={[
-      Autoplay({
-        delay: 2000,
-      }),
-    ]} opts={{
-    loop: true,
-  }}>
-      <Carousel.Content>
+      <div>
         {#each projects as proj}
-        <Carousel.Item class="grid justify-items-center">
-          <Card.Root class="max-w-full w-[60%] p-5">
-            <Card.Title class="mb-5">
-              <h3>{  proj.title }</h3>
-            </Card.Title>
-            <Card.Description>
+        <div class="grid justify-items-center">
+          <div class="max-w-full w-[60%] p-5">
+              <img src={'/projects/cclf.png'}/>
+              <h3>{ proj.title }</h3>
               <p>{ proj.desc }</p>
-            </Card.Description>
-          </Card.Root>
-        </Carousel.Item>
+          </div>
+        </div>
       {/each}
-      </Carousel.Content>
-        <Carousel.Previous />
-        <Carousel.Next />
-    </Carousel.Root>
+      </div>
+
+      <Pagination.Root count={5} let:pages>
+        <Pagination.PrevButton />
+        {#each pages as page (page.key)}
+          <Pagination.Page {page} />
+        {/each}
+        <Pagination.NextButton />
+      </Pagination.Root>
     
     </div>
 

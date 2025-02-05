@@ -9,23 +9,28 @@
   import Nav from "$lib/components/Nav.svelte";
 
   import { ModeWatcher } from "mode-watcher";
-  import { Button, Pagination } from "bits-ui";
+  import { Button } from "bits-ui";
 
-  let projectsPath: string = '/data/projects.tsv';
+  let projectsPath: string = "/files/projects.tsv";
   let projects: [] = [];
+  let numProjects: number;
 
-  
+  function imagePath(fileName: string): string {
+    return `/projects/${fileName}`;
+  }
+
   onMount(async () => {
     try {
       d3.tsv(projectsPath, (d: ProjectImport) => {
         return {
-          fileName: d['File Name'],
-          title: d['Title'],
-          desc: d['Description'],
-          url: d['URL'],
+          fileName: d["File Name"],
+          title: d["Title"],
+          desc: d["Description"],
+          url: d["URL"],
         };
       }).then((data: any) => {
         projects = data;
+        numProjects = Object.entries(projects).length;
       });
     } catch (error) {
       console.error("Error loading TSV file:", error);
@@ -47,7 +52,7 @@
       </div>
     </div>
 
-    <div class="indefinities-home-section">
+    <div class="indefinities-home-section mx-5">
       <h2>A little about me</h2>
       <h3 class="my-5">
         I'm a user <em>design-veloper</em> who advocates for
@@ -70,34 +75,41 @@
         >
       </p>
 
-      <p>Within my current position,</p>
+      <p class="my-5">
+        Outside of my work, I am a daughter, sister, friend, and enjoyer of the
+        creative and food scene. When I have the opportunity to do so (on a
+        meeting-free dat), I enjoy trying different roasts at different cafés
+        while enjoying the city of Boston to fuel my remote work. Otherwise,
+        you'll find me sketching something in my Moleskine or iPad or trying
+        different web technologies within my personal projects.
+      </p>
 
-      <Button.Root class="my-5">👀 peek my resume</Button.Root>
+      <Button.Root
+        type="button"
+        id="resumeBtn"
+        name="resume"
+        class="my-10 px-5 py-2 border border-white rounded-md text-lg"
+        href="/files/Hsu Natalie Resume.pdf"
+        target="_blank"
+      >
+        👀 peek my resume
+      </Button.Root>
     </div>
 
-    <div class="indefinities-home-section">
+    <div class="indefinities-home-section mx-5">
       <h2>Some of my work</h2>
       <!-- https://docs.google.com/spreadsheets/d/1s8DRDlWgLMvd4DbvoLtwvrqgdtc_dB0uyx8ZeQFMG3A/edit?gid=0#gid=0 -->
-      <div>
+      <div class="flex flex-row flex-wrap justify-around">
         {#each projects as proj}
-        <div class="grid justify-items-center">
-          <div class="max-w-full w-[60%] p-5">
-              <img src={'/projects/cclf.png'}/>
-              <h3>{ proj.title }</h3>
-              <p>{ proj.desc }</p>
+          <div class="max-w-full w-[40%] p-5">
+            <a href={proj.url} target="_blank">
+              <img class="rounded-md" src={imagePath(proj.fileName)} />
+            </a>
+            <h3>{proj.title}</h3>
+            <p>{proj.desc}</p>
           </div>
-        </div>
-      {/each}
-      </div>
-
-      <Pagination.Root count={5} let:pages>
-        <Pagination.PrevButton />
-        {#each pages as page (page.key)}
-          <Pagination.Page {page} />
         {/each}
-        <Pagination.NextButton />
-      </Pagination.Root>
-    
+      </div>
     </div>
 
     <div class="w-full h-screen grid content-center">

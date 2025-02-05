@@ -14,6 +14,9 @@ const config: Config = {
 			}
 		},
 		extend: {
+			boxShadow: {
+				mini: '0 1px 2px 0 rgba(0, 0, 0, 0.05)', // Example shadow
+			},
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",

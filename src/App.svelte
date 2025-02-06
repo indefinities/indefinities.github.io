@@ -48,11 +48,13 @@
         <h1>I'm <strong>Nat</strong></h1>
       </div>
       <div class="col-start-3 col-span-2">
-        <h3 class="italic text-right">— based in Boston, MA</h3>
+        <h3 class="italic text-right">
+          — born, raised, and based in Boston, MA
+        </h3>
       </div>
     </div>
 
-    <div class="indefinities-home-section mx-5">
+    <div class="indefinities-home-section mx-5 mb-8">
       <h2>A little about me</h2>
       <h3 class="my-5">
         I'm a user <em>design-veloper</em> who advocates for
@@ -73,15 +75,42 @@
           href="https://www.khoury.northeastern.edu/programs/bs-computer-sciencedesign/"
           target="_blank">Computer Science and Information Design</a
         >
+        from
+        <a href="https://www.northeastern.edu/" target="_blank">
+          Northeastern University</a
+        >
+        located in Boston, MA. In the past, I worked for
+        <a href="https://www.chewy.com/" target="_blank">Chewy</a>
+        as a UX Developer Co-Op for the
+        <a
+          href="https://pr-3441.demm.sbx.chewy.com/storybook-vue/?path=/docs/welcome--docs"
+          target="_blank">Chirp Design System Team</a
+        > and as a Software Engineer Co-Op at Numerated.
       </p>
 
       <p class="my-5">
-        Outside of my work, I am a daughter, sister, friend, and enjoyer of the
-        creative and food scene. When I have the opportunity to do so (on a
-        meeting-free dat), I enjoy trying different roasts at different cafés
-        while enjoying the city of Boston to fuel my remote work. Otherwise,
-        you'll find me sketching something in my Moleskine or iPad or trying
-        different web technologies within my personal projects.
+        When I was young, I was also really interested in webcomics and artists
+        using social media to post their artwork. I admired how artists could
+        utilize web development to manipulate elements within the screen on a
+        browser and use SaaS to sell their products. Now, I'm at a place where I
+        always wonder the simpilest question: "what happens when I click this?"
+      </p>
+
+      <p class="my-5">
+        Outside of my creative passions, I enjoy learning more about who I am
+        developing for and getting to really understand their pain points and
+        needs. My masters in Information Design and Data Visualization made me
+        realize that visually communicating is truly an important skill to have
+        in this day and age where people are constantly utilizing SaaS and
+        looking at websites.
+      </p>
+
+      <p class="my-5">
+        Now, when I have the chance, I love to continue exploring the city of
+        Boston, even though I resided here my whole life I still somehow find
+        something new every now and then. I also enjoy trying new food while
+        engaging in a creative activity (taking photos, drawing, listening to
+        music) and spending time with friends and family.
       </p>
 
       <Button.Root
@@ -94,6 +123,10 @@
       >
         👀 peek my resume
       </Button.Root>
+
+      <div class="w-full">
+        <img class="max-w-full w-[40%] ml-auto rounded-md" src="/me.jpg" alt="Picture of me"/>
+      </div>
     </div>
 
     <div class="indefinities-home-section mx-5">
@@ -114,10 +147,10 @@
 
     <div class="w-full h-screen grid content-center">
       <div class="col-span-4 col-start-3">
-        <h1>Let's get in touch</h1>
+        <h1><em>Let's grab a coffee sometime</em></h1>
       </div>
       <div class="col-start-4 col-span-2">
-        <h3 class="italic text-right">
+        <h3 class="underline text-right">
           <a href="mailto:natalie.d.hsu@gmail.com" target="_blank">
             natalie.d.hsu@gmail.com
           </a>

@@ -1,0 +1,163 @@
+{
+    "icons": {
+        "code": [
+            {
+                "disabled": false,
+                "key": "pattern-storybook",
+                "icon": "/icons/laptop.png",
+                "label": "Pattern Viz Components"
+            },
+            
+            {
+                "disabled": false,
+                "key": "pattern",
+                "icon": "/icons/pattern.png",
+                "label": "Pattern"
+            },
+            {
+                "disabled": false,
+                "key": "mister-monut",
+                "icon": "/icons/mm-logo.png",
+                "label": "Mister Monut"
+            },
+            {
+                "disabled": false,
+                "key": "portfolio",
+                "icon": "/icons/portfolio.png",
+                "label": "My Website"
+            },
+            {
+                "disabled": false,
+                "key": "mbta-viz",
+                "icon": "/icons/mbta.png",
+                "label": "MBTA-VIZ (soon)"
+            },
+            {
+                "disabled": false,
+                "key": "cclf",
+                "icon": "/icons/laptop.png",
+                "label": "CCLF"
+            }
+        ],
+        "design": [
+            {
+                "disabled": true,
+                "key": "2024-newsletter",
+                "icon": "/icons/framed_picture.png",
+                "label": "2024 FGBT Newsletter"
+            },
+            {
+                "disabled": true,
+                "key": "vege-plan",
+                "icon": "/icons/framed_picture.png",
+                "label": "Vege Plan A"
+            },
+            {
+                "disabled": true,
+                "key": "great-compassion",
+                "icon": "/icons/framed_picture.png",
+                "label": "Great Compassion"
+            },
+            {
+                "disabled": true,
+                "key": "necysc-2023",
+                "icon": "/icons/framed_picture.png",
+                "label": "NECYSC 2023 Weekbook"
+            }
+        ],
+        "ux": [
+            {
+                "disabled": false,
+                "key": "kft-redesign",
+                "icon": "/icons/pushpin.png",
+                "label": "Kung Fu Tea (Redesign)"
+            },
+            {
+                "disabled": false,
+                "key": "mass-pass",
+                "icon": "/icons/pushpin.png",
+                "label": "MassPass"
+            },
+            {
+                "disabled": false,
+                "key": "classmeetes",
+                "icon": "/icons/pushpin.png",
+                "label": "ClassMeetes"
+            }
+        ]
+    },
+    "code": [
+        {
+            "key": "portfolio",
+            "cover": "/projects/portfolio.png",
+            "title": "How did I make indefinite, infinities?",
+            "github": "https://github.com/indefinities/indefinities.github.io",
+            "figma": "https://www.figma.com/design/CY8umCRNaTr4Z3SF1xmANR/Portfolio-Design?node-id=0-1&t=ciMGetbIageTIQR1-1",
+            "description": "First, I gathered some inspiration from other developers and creators and annotated screenshots on a FigJam board. Then, I noted down some key features I wanted to emphasize and drew some wireframes accordingly. Finally, I mocked some screens to simulate the color and then started coding. Feel free to check out the links to further see my design and codebase :)."
+        },
+        {
+            "key": "mbta-viz",
+            "cover": "/projects/mbta.png",
+            "title": "Is the MBTA stalling again?",
+            "github": "https://github.com/indefinities/the-mbta-is-stalling",
+            "figma": "https://www.figma.com/design/BkwTXZmaMlu38TeMYCZi3c/MBTA-Wait?node-id=0-1&t=VSr1jOn2A8Zxm4b1-1",
+            "url": "",
+            "description": "'The MBTA Is Stalling' is a data visualization project I created for fun to visualize how long the T stalls at each stop. The idea is that I would gather data of all trips from the MBTA API, average the difference between arrival and departure time at each stop, then visualize it using a barplot. Above image captures my current wireframes in Figma."
+        },
+        {
+            "key": "pattern-storybook",
+            "cover": "/projects/pattern-storybook.png",
+            "title": "Pattern Viz Component Library (Storybook)",
+            "github": "https://github.com/broadinstitute/pattern-storybook",
+            "url": "https://broadinstitute.github.io/pattern-storybook/",
+            "description": ""
+        },
+        {
+            "key": "pattern",
+            "cover": "/projects/pattern.png",
+            "title": "Pattern",
+            "github": "",
+            "url": "https://pattern.broadinstitute.org/",
+            "description": "I was the primary developer and designer of the website showcasing Pattern's data visualization work."
+        },
+        {
+            "key": "mister-monut",
+            "cover": "/projects/mm.png",
+            "title": "Mister Monut",
+            "github": "https://github.com/indefinities/mister-monut",
+            "url": "https://mistermonut.com",
+            "description": "I am the primary developer and designer for Mister Monut's website. Mister Monut (now Pei Pei's Bakery) is a Asian-American bakery and cafe based in Waltham, MA which opened in January 2023."
+        },
+        {
+            "key": "cclf",
+            "cover": "/projects/cclf.png",
+            "title": "Cancer Cell Line Factory",
+            "github": "",
+            "url": "https://cellfactory.broadinstitute.org/#/",
+            "description": "Based on cancer cell line data from the CCLF team at the Broad Institute, I utilized D3.js, DataTables, jQuery, and Vue.js to implement a sunburst chart and an intuitive filtering mechanism for users"
+        }
+    ],
+    "ux": [
+        {
+            "key": "kft-redesign",
+            "cover": "",
+            "title": "Kung Fu Tea Re-Design",
+            "figma": "https://www.figma.com/design/tWJYuqaPlq1UqjtTaR0FSS/KFT_Redesign?m=auto&t=jlEB8ymrdHGo96wc-1",
+            "description": "UNDER CONSTRUCTION, please check out the Figma link on the top right corner in the meantime :)."
+        },
+        {
+            "key": "mass-pass",
+            "cover": "",
+            "title": "MassPass",
+            "figma": "https://www.figma.com/design/NkavoJoe0B8NRmTh1Iux8X/MassPass?m=auto&t=jlEB8ymrdHGo96wc-1",
+            "description": "UNDER CONSTRUCTION, please check out the Figma link on the top right corner in the meantime :)."
+        },
+        {
+            "key": "classmeetes",
+            "cover": "",
+            "title": "MassPass",
+            "figma": "https://www.figma.com/design/lrYxBEXEs4a9dCqkr5Gjq8/Classmeetes?m=auto&t=jlEB8ymrdHGo96wc-1",
+            "description": "UNDER CONSTRUCTION, please check out the Figma link on the top right corner in the meantime :)."
+        }
+    ]
+}

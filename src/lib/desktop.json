@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "disabled": false,
+            "key": "about",
+            "icon": "/icons/about.png",
+            "label": "About"
+        },
+        {
+            "disabled": false,
+            "key": "portfolio",
+            "icon": "/icons/portfolio.png",
+            "label": "My Website"
+        },
+        {
+            "disabled": false,
+            "key": "mbta-viz",
+            "icon": "/icons/mbta.png",
+            "label": "MBTA-VIZ (soon)"
+        },
+        {
+            "disabled": false,
+            "key": "projects",
+            "icon": "/icons/projects.png",
+            "label": "Projects"
+        },
+        {
+            "disabled": false,
+            "key": "illustrations",
+            "icon": "/icons/art.png",
+            "label": "Illustrations"
+        },
+        {
+            "disabled": false,
+            "key": "resume",
+            "icon": "/icons/resume.png",
+            "label": "Resume"
+        }
+    ]
+}

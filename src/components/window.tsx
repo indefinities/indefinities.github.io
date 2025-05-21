@@ -15,8 +15,12 @@ export default function Window({ isMobile, children, hasPrevious, label, onClose
         let [x, y] = [event.clientX - startPos.current.x, event.clientY - startPos.current.y]
         if (x < 0) x = 0;
         if (y < 0) y = 0;
-        if (x > 2 * window.innerWidth / 3) x = 2 * window.innerWidth / 3;
-        // TODO: check if window goes beyond viewport width and height
+        if (popupRef.current) {
+            let width: number = popupRef.current.offsetWidth;
+            let height: number = popupRef.current.offsetHeight;
+            if (x + width > window.innerWidth) x = window.innerWidth - width;
+            if (y + height > window.innerHeight) y = window.innerHeight - height;
+        }
         setPosition({ x, y });
     },
         [isDrag]);
@@ -33,7 +37,6 @@ export default function Window({ isMobile, children, hasPrevious, label, onClose
             y: event.clientY - position.y,
         };
     };
-
 
     useEffect(() => {
         window.addEventListener("mousemove", onMouseMove);
